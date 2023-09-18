@@ -34,6 +34,7 @@ body {
 
 
 
+
 }
 
 #contentbody {
@@ -49,10 +50,10 @@ body {
     width: 100%;
     /* 20px is the space between the the navbar and the text */
     /* 100px is the space between the home button and the other buttons */
-    padding: 10px 50px;
+    padding: 5px 50px;
     background-color: rgb(255, 39, 39);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     /* Vertical */
     align-items: center;
     /* Infort of */
@@ -60,12 +61,12 @@ body {
     box-shadow: 0px 5px 5px 0px rgba(72, 72, 72, 0.481);
 }
 
-/* Change to class */
+/* Change to class
 button {
     border: 3px solid rgb(179, 58, 58);
     border-radius: 14px;
     padding: 10px 30px;
-    /* Sets the text color of buttons */
+    /* Sets the text color of buttons
     color: white;
     font-weight: bold;
     font-family: 'Quicksand';
@@ -78,8 +79,25 @@ button {
     transition-property: background-color;
     transition: .5s;
 
-}
+}*/
 
+/* New buttons with line */
+
+button {
+    border: 0px solid rgb(0, 0, 0);
+
+    font-size: 15px;
+    padding: 10px 30px;
+    /* Sets the text color of buttons */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Quicksand';
+
+    background-color: transparent;
+
+    transition-property: background-color;
+    transition: .5s;
+}
 
 button:hover {
     background-position: 100% 100%;
@@ -165,19 +183,22 @@ footer {
 }
 
 .shopitem {
-
     cursor: pointer;
-    box-shadow: 0px 0px 10px 0px rgba(72, 72, 72, 0.836);
     transition: 0.5s;
 
+    /* border-radius: 10px; */
+    border: #3e3e3e 2px solid;
 }
 
 #shopitem_text {
     /* border-top: 5px solid #555; */
+
+    padding: 0.5em;
 }
 
 
 .shopitem:hover {
+    box-shadow: 0px 0px 10px 0px rgba(72, 72, 72, 0.836);
     transform: scale(1.1);
 }
 
