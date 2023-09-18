@@ -1,0 +1,270 @@
+/*
+
+    TODO:   Add a selection for button when we are on that page
+            example: when we are on the home page, the home button should be red or just a different color
+
+            Fix the icons for in the shop
+
+    LOG:
+            Jens: Might redo the whole thing, because it's a mess.               13-09-23     21:22
+            Jens: I am redoing this mess.                                        13-09-23     22:57
+
+            Jens: I have redone the navbar.                                      14-09-23     10:34
+            Jens: I have added a gradient effect to the buttons.                 14-09-23     19:28
+            Jens: I have added a footer.                                         14-09-23     21:01
+            Jens: I'll try to look at a tutorial, because this is not working    14-09-23     22:30
+            Jens: I have added a shadow to shop items                            15-09-23     10:29
+
+*/
+
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/close.css');
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Quicksand', Helvetica, sans-serif;
+
+
+
+}
+
+#contentbody {
+    filter: none;
+
+
+}
+
+.header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 20px is the space between the the navbar and the text */
+    /* 100px is the space between the home button and the other buttons */
+    padding: 10px 50px;
+    background-color: rgb(255, 39, 39);
+    display: flex;
+    justify-content: center;
+    /* Vertical */
+    align-items: center;
+    /* Infort of */
+    z-index: 100;
+    box-shadow: 0px 5px 5px 0px rgba(72, 72, 72, 0.481);
+}
+
+/* Change to class */
+button {
+    border: 3px solid rgb(179, 58, 58);
+    border-radius: 14px;
+    padding: 10px 30px;
+    /* Sets the text color of buttons */
+    color: white;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    background: rgb(232, 159, 191);
+    background: linear-gradient(143deg, rgba(232, 159, 191, 1) 0%, rgb(217, 15, 18) 58%, rgb(203, 172, 172) 78%, rgb(208, 159, 158) 100%);
+
+    background-size: 200% 400%;
+    background-position: 100%;
+
+    transition-property: background-color;
+    transition: .5s;
+
+}
+
+
+button:hover {
+    background-position: 100% 100%;
+}
+
+
+footer {
+    position: static;
+
+    /* Put the footer on the bottom */
+    bottom: 0;
+    left: 0;
+
+    /* Put the text on the right side */
+    text-align: right;
+
+    color: white;
+
+    text-decoration: none;
+
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    width: 100%;
+    height: auto;
+
+    background-color: blue;
+
+    box-shadow: 0px -5px 5px 0px rgba(72, 72, 72, 0.286);
+}
+
+.logo {
+    font-size: 25px;
+    text-decoration: none;
+
+
+    position: relative;
+}
+
+.content {
+    padding: 2em;
+}
+
+/* Holds the mens and womens section */
+/* .flexcontainer{
+    display: flex;
+
+} */
+
+/* Is The diffrent products */
+#mens,
+#womens {
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    list-style: none;
+    display: flex;
+    margin: auto;
+
+    gap: 2em;
+    text-align: center;
+
+
+    /* Use % for dynamic bullshit */
+    width: 100%;
+
+    height: auto;
+
+    padding: 2em;
+}
+
+#cross
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    font-size: 2em;
+    color: #555;
+    cursor: pointer;
+}
+
+.shopitem {
+
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(72, 72, 72, 0.836);
+    transition: 0.5s;
+
+}
+
+#shopitem_text {
+    /* border-top: 5px solid #555; */
+}
+
+
+.shopitem:hover {
+    transform: scale(1.1);
+}
+
+#preview_item {
+
+    display: none;
+
+
+    position:absolute;
+    z-index: 100;
+
+
+    /* Center */
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    backdrop-filter: blur(10px);
+
+    background-color: white;
+
+    width: 45%;
+    height: auto;
+
+    text-align: center;
+
+    border: #3e3e3e 4px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(27, 27, 27, 0.836);
+
+
+
+    padding: 2em 2em 2em 2em;
+}
+
+.hamburger {
+    display: none;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: white;
+
+}
+
+/* If we are on mobile create a hamburger menu */
+@media(max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar{
+        position: fixed;
+        left: -100%;
+        top: 85px;
+        gap: 0;
+
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 39, 39);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navbar.active{
+        left: 0;
+    }
+
+
+}
+
