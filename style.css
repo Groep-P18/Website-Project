@@ -83,11 +83,12 @@ button {
 
 /* New buttons with line */
 
-button {
+.navbutton {
     border: 0px solid rgb(0, 0, 0);
     border-bottom: 0px solid rgb(0, 0, 0);
-    /* border-width: 100%; */
+    text-decoration: none;
 
+    position:sticky;
     font-size: 17px;
     padding: 5px 10px;
     /* Sets the text color of buttons */
@@ -101,8 +102,9 @@ button {
     transition: ease-out 0.3s;
 }
 
-button:hover {
+.navbutton:hover {
 
+    transform: translateX(-5px);
     border-bottom: 8px solid rgb(0, 0, 0);
 }
 
@@ -141,16 +143,61 @@ footer {
 
 .content {
 
+    /* display: flex; */
     padding: 4em;
 
 }
 
-/* Holds the mens and womens section */
- .flexcontainer{
-    /* display: flex; */
-    /* padding-top: 1em; */
+
+.profile{
+    /* Create a small box that has a title, text and on the right side a profile picture*/
+
+    display: flex;
+    gap: 1em 1em;
+
+    /* justify-content: center; */
+    /* size: auto auto; */
+
+    border: black 2px solid;
 
 }
+
+.profile_text{
+    margin: auto;
+
+}
+
+.profile_img{
+    width: 128px;
+    height: 128px;
+
+    margin: 2em;
+
+    border-radius: 50%;
+}
+
+/* Container that contains the profiles */
+.profiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+/* .profile_img{
+
+} */
+
+
+/* Holds the mens and womens section */
+/* Nice for order on the shop */
+/*
+ .flexcontainer{
+    /* display: flex; */
+    /* padding-top: 1em;
+
+}
+*/
 
 /* Is The diffrent products */
 #mens,
@@ -212,6 +259,12 @@ footer {
 }
 
 .shopitem_image{
+    width: 285px;
+    height: 350px;
+
+}
+
+#preview_img{
     width: 285px;
     height: 350px;
 
@@ -291,7 +344,7 @@ footer {
 
         display: flex;
         flex-direction: column;
-        background-color: rgb(255, 39, 39);
+        background-color: rgb(244, 93, 93);;
         width: 100%;
         text-align: center;
         transition: 0.3s;
