@@ -1,6 +1,6 @@
-function openShop() {
+function openShop(foto1, text) {
 
-
+    updatePreview(foto1, text);
 
     if (document.getElementById("preview_item").style.display == "none") {
 
@@ -23,6 +23,20 @@ function openShop() {
         console.log("close shop");
 
     }
+
+}
+
+function updatePreview(foto1, text) {
+
+    const preview = document.getElementById("preview_item");
+
+    let preview_img = document.getElementById("preview_img");
+    let preview_text = document.getElementById("preview_text");
+
+    preview_img.src = foto1;
+    preview_text.innerHTML = text;
+
+
 
 }
 

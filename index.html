@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kendo</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="style.css"> <!-- You can link to an external stylesheet -->
 </head>
 
@@ -16,15 +17,16 @@
 
 
             <a href="index.html" class="logo">
-                <h1>&#9200</h1>
+                <img src="logo.png" width="64" height="64">
             </a>
 
             <nav class="navbar">
 
                 <a href="index.html"><button>Home</button></a>
                 <a href="shop.html"><button>Shop</button></a>
-                <a href="#about"><button>About us</button></a>
+                <a href="about.html"><button>About us</button></a>
                 <a href="#contact"><button>Contact</button></a>
+
             </nav>
 
 
@@ -42,147 +44,105 @@
 
         <div class="flexcontainer">
 
+
+            <!--
+                Little info about the openShop function:
+                the open shop function has two parameters, this first one is for the image and the second one is for the text.
+
+                calling the function would something look like this: openShop('imageurl', 'text you want in the preview')
+             -->
             <ul id="mens">
-
                 <li>
-                    <div class="shopitem" onclick="openShop()">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
+                    <div class="shopitem"
+                        onclick="openShop('https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg', 'Hello')">
+                        <img class="shopitem_image"
+                            src="https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg"
                             alt="">
 
-                        <p id="shopitem_text">$133 now $65</p>
+                        <p class="shopitem_text">$133 now $65</p>
                     </div>
                 </li>
 
                 <li>
-                    <div class="shopitem" onclick="openShop()">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
+                    <div class="shopitem"
+                        onclick="openShop('https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg', 'Hello')">
+                        <img class="shopitem_image"
+                            src="https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg"
                             alt="">
 
-                        <p id="shopitem_text">$133 now $65</p>
+                        <p class="shopitem_text">$133 now $65</p>
                     </div>
                 </li>
 
                 <li>
-                    <div class="shopitem" onclick="openShop()">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
+                    <div class="shopitem"
+                        onclick="openShop('https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg', 'Hello')">
+                        <img class="shopitem_image"
+                            src="https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg"
                             alt="">
 
-                        <p id="shopitem_text">$490 now $65</p>
+                        <p class="shopitem_text">$133 now $65</p>
                     </div>
                 </li>
 
                 <li>
-                    <div class="shopitem" onclick="openShop()">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
+                    <div class="shopitem"
+                        onclick="openShop('https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg', 'Hello')">
+                        <img class="shopitem_image"
+                            src="https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg"
                             alt="">
 
-                        <p id="shopitem_text">$133 now $65</p>
+                        <p class="shopitem_text">$133 now $65</p>
                     </div>
                 </li>
 
                 <li>
-                    <div class="shopitem" onclick="openShop()">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
+                    <div class="shopitem"
+                        onclick="openShop('https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg', 'Hello')">
+                        <img class="shopitem_image"
+                            src="https://footdistrict.nl/media/resize/2000x2500/catalog/product/1/5/156_193259907685/obey-clothing-a-piece-of-heaven-mens-t-shirt-166913558-irc-0.jpg"
                             alt="">
 
-                        <p id="shopitem_text">$133 now $65</p>
+                        <p class="shopitem_text">$133 now $65</p>
                     </div>
                 </li>
 
-                <li>
-                    <div class="shopitem" onclick="openShop()">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
-                            alt="">
-
-                        <p id="shopitem_text">$133 now $65</p>
-                    </div>
-                </li>
 
 
 
             </ul>
 
             <ul id="womens">
+
                 <li>
-                    <div class="shopitem">
-                        <img id="l1"
+                    <div class="shopitem"
+                        onclick="openShop('https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg', 'Hello world')">
+                        <img class="shopitem_image"
                             src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
                             alt="">
 
-                        <p id="shopitem_text">$133 now $65</p>
+                        <p class="shopitem_text">$133 now $65</p>
                     </div>
                 </li>
 
-                <li>
-                    <div class="shopitem">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
-                            alt="">
-
-                        <p id="shopitem_text">$133 now $65</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="shopitem">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
-                            alt="">
-
-                        <p id="shopitem_text">$ now $65</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="shopitem">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
-                            alt="">
-
-                        <p id="shopitem_text">$133 now $65</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="shopitem">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
-                            alt="">
-
-                        <p id="shopitem_text">$133 now $65</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="shopitem">
-                        <img id="l1"
-                            src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
-                            alt="">
-
-                        <p id="shopitem_text">$133 now $65</p>
-                    </div>
-                </li>
             </ul>
+                <!-- Everything will be in here -->
+                <div class="content">
+
+                    <h1>Lorem, ipsum.</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit rem quo labore ducimus veniam nulla
+                        distinctio
+                        laborum? Consequuntur reprehenderit doloribus magni, doloremque error a aspernatur, explicabo
+                        voluptate
+                        tempore, exercitationem aut.
+                    </p>
 
 
-                    <!-- Everything will be in here -->
-        <div class="content">
 
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit rem quo labore ducimus veniam nulla
-                distinctio
-                laborum? Consequuntur reprehenderit doloribus magni, doloremque error a aspernatur, explicabo voluptate
-                tempore, exercitationem aut.
-            </p>
-
+                </div>
 
 
         </div>
-
-
         <!-- This will be the foot of the website -->
 
 
@@ -190,7 +150,11 @@
 
 
 
+
             <p>Copyright Kendo All rights reserved</p>
+
+
+
             <div class="icons-foot">
                 <a href="http://facebook.com"><span class="gg-instagram"></span></a>
                 <a href="http://twitter.com"><span class="gg-facebook"></span></a>
@@ -202,30 +166,32 @@
 
 
 
-        </div>
+
+
 
 
 
         </footer>
 
-
-
-        <script src="script.js"></script>
     </div>
 
+    <script src="script.js"></script>
+
+
+    <!-- Moved to javascript, the images are now custom -->
     <div id="preview_item">
 
 
 
-        <img id="l1"
+        <img id="preview_img"
             src="https://cdn.webshopapp.com/shops/315257/files/438888048/285x350x1/stone-island-stone-island-hand-colouring-special-p.jpg"
-            width="75%" height="auto"
-            alt="">
+            width="75%" height="auto" alt="">
 
-            <div id="cross" onclick="openShop()">
-                <i class="gg-close"></i>
-            </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rem molestiae facere explicabo natus,
+        <div id="cross" onclick="openShop()">
+            <i class="gg-close"></i>
+        </div>
+        <p id="preview_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rem molestiae
+            facere explicabo natus,
             labore aliquid, laboriosam dolorem quibusdam cum! Inventore totam alias voluptatum assumenda. Cum provident
             voluptatum magnam iste sequi ipsam distinctio magni officiis perferendis, ab minus consequuntur esse
             recusandae, nihil dolores labore saepe quisquam, maxime praesentium itaque maiores enim? Et fuga quos

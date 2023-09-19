@@ -50,8 +50,8 @@ body {
     width: 100%;
     /* 20px is the space between the the navbar and the text */
     /* 100px is the space between the home button and the other buttons */
-    padding: 5px 50px;
-    background-color: rgb(255, 39, 39);
+    padding: 10px 50px;
+    background-color: rgb(244, 93, 93);
     display: flex;
     justify-content: space-between;
     /* Vertical */
@@ -85,9 +85,11 @@ button {
 
 button {
     border: 0px solid rgb(0, 0, 0);
+    border-bottom: 0px solid rgb(0, 0, 0);
+    /* border-width: 100%; */
 
-    font-size: 15px;
-    padding: 10px 30px;
+    font-size: 17px;
+    padding: 5px 10px;
     /* Sets the text color of buttons */
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -95,17 +97,19 @@ button {
 
     background-color: transparent;
 
-    transition-property: background-color;
-    transition: .5s;
+
+    transition: ease-out 0.3s;
 }
 
 button:hover {
-    background-position: 100% 100%;
+
+    border-bottom: 8px solid rgb(0, 0, 0);
 }
 
 
 footer {
-    position: static;
+    /* static normal */
+    position:inherit;
 
     /* Put the footer on the bottom */
     bottom: 0;
@@ -115,17 +119,14 @@ footer {
     text-align: right;
 
     color: white;
-
     text-decoration: none;
-
 
     padding-top: 2rem;
     padding-bottom: 2rem;
-
     width: 100%;
     height: auto;
 
-    background-color: blue;
+    background-color: rgb(56, 56, 74);
 
     box-shadow: 0px -5px 5px 0px rgba(72, 72, 72, 0.286);
 }
@@ -139,14 +140,17 @@ footer {
 }
 
 .content {
-    padding: 2em;
+
+    padding: 4em;
+
 }
 
 /* Holds the mens and womens section */
-/* .flexcontainer{
-    display: flex;
+ .flexcontainer{
+    /* display: flex; */
+    /* padding-top: 1em; */
 
-} */
+}
 
 /* Is The diffrent products */
 #mens,
@@ -167,7 +171,6 @@ footer {
     width: 100%;
 
     height: auto;
-
     padding: 2em;
 }
 
@@ -186,13 +189,19 @@ footer {
     cursor: pointer;
     transition: 0.5s;
 
+    /* Makes items look cool */
+    /* If disabled, disable border-top in shopitem_text too */
+    padding: 1em;
+
+    /* Maybe enable? */
     /* border-radius: 10px; */
     border: #3e3e3e 2px solid;
 }
 
-#shopitem_text {
-    /* border-top: 5px solid #555; */
+.shopitem_text {
+    border-top: 3px solid #555;
 
+    /* Use text align for left prices */
     padding: 0.5em;
 }
 
@@ -200,6 +209,12 @@ footer {
 .shopitem:hover {
     box-shadow: 0px 0px 10px 0px rgba(72, 72, 72, 0.836);
     transform: scale(1.1);
+}
+
+.shopitem_image{
+    width: 285px;
+    height: 350px;
+
 }
 
 #preview_item {
@@ -245,12 +260,12 @@ footer {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background-color: white;
 
 }
 
-/* If we are on mobile create a hamburger menu */
+/* If our screen-width is less than 768 pixels, create a hamburger menu */
 @media(max-width: 768px) {
     .hamburger {
         display: block;
