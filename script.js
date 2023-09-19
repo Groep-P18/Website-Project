@@ -10,7 +10,7 @@ function openShop(foto1, text) {
         document.getElementById("preview_item").style.display = "unset";
         document.getElementById("contentbody").style.filter = "blur(5px)";
         document.getElementById("contentbody").style.pointerEvents = "none";
-        document.getElementById("contentbody").style.transition = "all 0.5s ease-in-out"; COOL :D
+        document.getElementById("contentbody").style.transition = "all 0.5s ease-in-out";
 
 
 
