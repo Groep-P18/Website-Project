@@ -3,18 +3,6 @@
     TODO:   Add a selection for button when we are on that page
             example: when we are on the home page, the home button should be red or just a different color
 
-            Fix the icons for in the shop
-
-    LOG:
-            Jens: Might redo the whole thing, because it's a mess.               13-09-23     21:22
-            Jens: I am redoing this mess.                                        13-09-23     22:57
-
-            Jens: I have redone the navbar.                                      14-09-23     10:34
-            Jens: I have added a gradient effect to the buttons.                 14-09-23     19:28
-            Jens: I have added a footer.                                         14-09-23     21:01
-            Jens: I'll try to look at a tutorial, because this is not working    14-09-23     22:30
-            Jens: I have added a shadow to shop items                            15-09-23     10:29
-
 */
 
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/close.css');
@@ -32,7 +20,8 @@ body {
     min-height: 100vh;
     font-family: 'Quicksand', Helvetica, sans-serif;
 
-
+    /* Make the text bigger */
+    /* font-size: 17px; */
 
 
 }
@@ -61,28 +50,7 @@ body {
     box-shadow: 0px 5px 5px 0px rgba(72, 72, 72, 0.481);
 }
 
-/* Change to class
-button {
-    border: 3px solid rgb(179, 58, 58);
-    border-radius: 14px;
-    padding: 10px 30px;
-    /* Sets the text color of buttons
-    color: white;
-    font-weight: bold;
-    font-family: 'Quicksand';
-    background: rgb(232, 159, 191);
-    background: linear-gradient(143deg, rgba(232, 159, 191, 1) 0%, rgb(217, 15, 18) 58%, rgb(203, 172, 172) 78%, rgb(208, 159, 158) 100%);
-
-    background-size: 200% 400%;
-    background-position: 100%;
-
-    transition-property: background-color;
-    transition: .5s;
-
-}*/
-
-/* New buttons with line */
-
+/* Line buttons */
 .navbutton {
     border: 0px solid rgb(0, 0, 0);
     border-bottom: 0px solid rgb(0, 0, 0);
@@ -177,10 +145,12 @@ footer {
 }
 
 /* Container that contains the profiles */
-.profiles{
+.profile_container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* Maybe set me in .content */
+    margin-top: 2em;
     gap: 2em;
 }
 
@@ -265,8 +235,8 @@ footer {
 }
 
 #preview_img{
-    width: 285px;
-    height: 350px;
+    width: 75%;
+    height: auto;
 
 }
 
