@@ -4,6 +4,8 @@
             example: when we are on the home page, the home button should be red or just a different color
 
             Remove underline on navbar if we are using the hamburger menu
+
+            Revert commit that makes the hamburger menu fucked
 */
 
 /* Maybe change to images <_< */
@@ -47,12 +49,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    /* 20px is the space between the the navbar and the text */
-    /* 100px is the space between the home button and the other buttons */
-    padding: 10px 50px;
+    padding: 1.5em;
     background-color: rgb(244, 93, 93);
     display: flex;
-    /* text-align: center; */
+    /* text-align: right; */
     /* justify-content: center; */
     /* Vertical */
     align-items: center;
@@ -62,22 +62,7 @@ body {
     box-shadow: 0px 5px 5px 0px rgba(72, 72, 72, 0.481);
 }
 
-.navbar{
-    position: static;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* 20px is the space between the the navbar and the text */
-    /* 100px is the space between the home button and the other buttons */
-    padding: 10px 50px;
 
-    display: flex;
-    /* text-align: center; */
-    justify-content: center;
-    /* Vertical */
-    align-items: center;
-
-}
 
 
 
@@ -90,11 +75,11 @@ body {
     text-decoration: none;
 
     position:sticky;
-    font-size: 17px;
+    font-size: 25px;
     padding: 5px 10px;
     /* Sets the text color of buttons */
     color: rgb(0, 0, 0);
-    font-weight: bold;
+    /* font-weight: bold; */
     font-family: 'LogoFont';
 
     background-color: transparent;
@@ -141,7 +126,7 @@ footer {
     font-size: 25px;
     text-decoration: none;
 
-
+    font-family: 'LogoFont';
 }
 
 .content {
@@ -189,11 +174,6 @@ footer {
     gap: 2em;
 }
 
-/* .profile_img{
-
-} */
-
-
 /* Holds the mens and womens section */
 /* Nice for order on the shop */
 /*
@@ -224,6 +204,7 @@ footer {
 
     height: auto;
     padding: 2em;
+    padding-top: 3em;
 }
 
 #cross
@@ -245,6 +226,10 @@ footer {
     /* If disabled, disable border-top in shopitem_text too */
     padding: 1em;
 
+
+    height: auto;
+    width: auto;
+
     /* Maybe enable? */
     /* border-radius: 10px; */
     border: #3e3e3e 2px solid;
@@ -264,8 +249,8 @@ footer {
 }
 
 .shopitem_image{
-    width: 285px;
-    height: 350px;
+    width: 200px;
+    height: auto;
 
 }
 
@@ -344,7 +329,7 @@ footer {
     .navbar{
         position: fixed;
         left: -100%;
-        top: 85px;
+        top: 4em;
         gap: 0;
 
         display: flex;
