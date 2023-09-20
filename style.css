@@ -83,6 +83,36 @@ body {
     border-bottom: 8px solid rgb(0, 0, 0);
 }
 
+/* .flexcontainer{
+
+} */
+
+
+.uitgelicht{
+
+    /* background-image: url("https://media.istockphoto.com/id/1350036914/vector/vector-cartoon-background-with-color-abstract-dots.jpg?s=612x612&w=0&k=20&c=1XVtlTiz80yMFlf1xJc58kc9MfYJszIrtUEI4cotV6k="); */
+
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* background-color: royalblue; */
+}
+
+.uitgelicht_img{
+    width: 90%;
+
+    text-align: center;
+
+    height: auto;
+
+
+    background-color: red;
+}
+
+#uit_text{
+    position: absolute;
+
+}
 
 footer {
     /* static normal */
@@ -157,6 +187,8 @@ footer {
 
 
 .contact_form{
+    display: flex;
+    flex-direction: column;
 
 }
 
