@@ -2,15 +2,23 @@ function openShop(foto1, text) {
 
     updatePreview(foto1, text);
 
+
+
     if (document.getElementById("preview_item").style.display == "none") {
 
 
         console.log("open shop");
 
+
+
+
         document.getElementById("preview_item").style.display = "unset";
         document.getElementById("contentbody").style.filter = "blur(5px)";
+        // Make sure the user can't click on anything behind the menu
         document.getElementById("contentbody").style.pointerEvents = "none";
         document.getElementById("contentbody").style.transition = "all 0.5s ease-in-out";
+
+        document.getElementById("preview_item").scrollIntoView({ behavior: 'smooth', block: 'center'});
 
 
 
