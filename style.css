@@ -11,6 +11,8 @@
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/twitter.css');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css');
 
+
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
@@ -26,8 +28,6 @@ body {
 
     /* Make the text bigger */
     /* font-size: 17px; */
-
-
 }
 
 #contentbody {
@@ -35,6 +35,12 @@ body {
 
 
 }
+
+@font-face {
+    font-family: LogoFont;
+    src: url(logo_font.ttf);
+}
+
 
 .header {
     position: static;
@@ -46,13 +52,36 @@ body {
     padding: 10px 50px;
     background-color: rgb(244, 93, 93);
     display: flex;
-    justify-content: space-between;
+    /* text-align: center; */
+    /* justify-content: center; */
     /* Vertical */
     align-items: center;
+
     /* Infort of */
     z-index: 100;
     box-shadow: 0px 5px 5px 0px rgba(72, 72, 72, 0.481);
 }
+
+.navbar{
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 20px is the space between the the navbar and the text */
+    /* 100px is the space between the home button and the other buttons */
+    padding: 10px 50px;
+
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    /* Vertical */
+    align-items: center;
+
+}
+
+
+
+
 
 /* Line buttons */
 .navbutton {
@@ -66,7 +95,7 @@ body {
     /* Sets the text color of buttons */
     color: rgb(0, 0, 0);
     font-weight: bold;
-    font-family: 'Quicksand';
+    font-family: 'LogoFont';
 
     background-color: transparent;
 
@@ -90,7 +119,7 @@ footer {
     left: 0;
 
     /* Put the text on the right side */
-    text-align: right;
+    text-align: center;
 
 
     color: white;
@@ -107,13 +136,12 @@ footer {
 }
 
 
-
+/* Put the logo on the left */
 .logo {
     font-size: 25px;
     text-decoration: none;
 
 
-    position: relative;
 }
 
 .content {
