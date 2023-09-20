@@ -120,7 +120,7 @@ html {
 
 footer {
     /* static normal */
-    position:inherit;
+    position:static;
 
     /* Put the footer on the bottom */
     bottom: 0;
