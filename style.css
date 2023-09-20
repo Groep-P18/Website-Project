@@ -13,8 +13,6 @@
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/twitter.css');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css');
 
-
-
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
@@ -30,6 +28,8 @@ body {
 
     /* Make the text bigger */
     /* font-size: 17px; */
+
+
 }
 
 #contentbody {
@@ -37,12 +37,6 @@ body {
 
 
 }
-
-@font-face {
-    font-family: LogoFont;
-    src: url(logo_font.ttf);
-}
-
 
 .header {
     position: static;
@@ -52,21 +46,13 @@ body {
     padding: 1.5em;
     background-color: rgb(244, 93, 93);
     display: flex;
-    /* text-align: right; */
-    /* justify-content: center; */
+    justify-content: space-between;
     /* Vertical */
     align-items: center;
-
     /* Infort of */
     z-index: 100;
     box-shadow: 0px 5px 5px 0px rgba(72, 72, 72, 0.481);
 }
-
-
-
-
-
-
 
 /* Line buttons */
 .navbutton {
@@ -79,8 +65,8 @@ body {
     padding: 5px 10px;
     /* Sets the text color of buttons */
     color: rgb(0, 0, 0);
-    /* font-weight: bold; */
-    font-family: 'LogoFont';
+    font-weight: bold;
+    font-family: 'Quicksand';
 
     background-color: transparent;
 
@@ -104,7 +90,7 @@ footer {
     left: 0;
 
     /* Put the text on the right side */
-    text-align: center;
+    text-align: right;
 
 
     color: white;
@@ -121,12 +107,13 @@ footer {
 }
 
 
-/* Put the logo on the left */
+
 .logo {
     font-size: 25px;
     text-decoration: none;
 
-    font-family: 'LogoFont';
+
+    position: relative;
 }
 
 .content {
