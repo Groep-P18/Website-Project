@@ -1,6 +1,9 @@
-function openShop(foto1, text) {
+const preview = document.getElementById("preview_item");
+let slideIndex = 1;
 
-    updatePreview(foto1, text);
+function openShop(foto1, foto2, foto3, text) {
+
+    updatePreview(foto1, foto2, foto3, text);
 
 
 
@@ -34,18 +37,42 @@ function openShop(foto1, text) {
 
 }
 
-function updatePreview(foto1, text) {
+function updatePreview(foto1, foto2, foto3, text) {
 
-    const preview = document.getElementById("preview_item");
 
-    let preview_img = document.getElementById("preview_img");
+
+    let preview_img1 = document.getElementById("preview_img1");
+    let preview_img2 = document.getElementById("preview_img2");
+    let preview_img3 = document.getElementById("preview_img3");
+
     let preview_text = document.getElementById("preview_text");
 
-    preview_img.src = foto1;
+    preview_img1.src = foto1;
+    preview_img2.src = foto2;
+    preview_img3.src = foto3;
+
     preview_text.innerHTML = text;
 
 
 
+}
+
+
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  let i;
+  let x = document.getElementsByClassName("preview_img");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "unset";
 }
 
 const hamburger = document.querySelector(".hamburger");

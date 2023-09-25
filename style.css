@@ -53,7 +53,7 @@ html {
     padding: 1.5em;
     background-color: rgb(244, 93, 93);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* Vertical */
     align-items: center;
     /* Infort of */
@@ -163,7 +163,7 @@ footer {
 
 
 .profile{
-    /* Create a small box that has a title, text and on the right side a profile picture*/
+    /* Create a small box that has a title, text and on the right side a profile picture on the left*/
 
     display: flex;
     gap: 1em 1em;
@@ -171,8 +171,14 @@ footer {
     /* justify-content: center; */
     /* size: auto auto; */
 
+    transition: .5s;
+
     border: black 2px solid;
 
+}
+
+.profile:hover{
+    box-shadow: #38384a 0px 0px 10px 0px;
 }
 
 .profile_text{
@@ -276,7 +282,7 @@ footer {
 
 }
 
-#preview_img{
+.preview_img{
     width: 75%;
     height: auto;
 
@@ -311,7 +317,7 @@ footer {
 
 
 
-    padding: 2em 2em 2em 2em;
+    padding: 2em;
 }
 
 .hamburger {
