@@ -1,5 +1,17 @@
 const preview = document.getElementById("preview_item");
+
+const hamburger = document.querySelector(".hamburger");
+const navBar = document.querySelector(".navbar");
 let slideIndex = 1;
+
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navBar.classList.toggle("active");
+    console.log("clicked");
+})
+
+
 
 function openShop(foto1, foto2, foto3, text) {
 
@@ -36,7 +48,7 @@ function openShop(foto1, foto2, foto3, text) {
     }
 
 }
-
+// Move to openShop, because it's ugly
 function updatePreview(foto1, foto2, foto3, text) {
 
 
@@ -74,12 +86,3 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "unset";
 }
-
-const hamburger = document.querySelector(".hamburger");
-const navBar = document.querySelector(".navbar");
-
-
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navBar.classList.toggle("active");
-})

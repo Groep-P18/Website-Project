@@ -5,6 +5,7 @@
 
             Center buttons in navbar
 
+            shopfilter and mens have both a margin, this has to be
 
 */
 
@@ -15,6 +16,12 @@
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+@font-face {
+    font-family: kendoFont;
+    src: url("kendo_font.ttf");
+}
+
 
 * {
     margin: 0;
@@ -87,10 +94,74 @@ html {
     border-bottom: 8px solid rgb(0, 0, 0);
 }
 
-/* .flexcontainer{
+.filterandshop{
+    display: flex;
+    gap: 2em;
+    /* flex-wrap: nowrap; */
+}
+
+.shopfilter {
+    background-color: brown;
+    width: 10em;
+    flex-direction: row;
+    border-radius: 10px;
+    margin: 2em;
+    height: 982px;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-position: inside;
+}
+
+.filter{
+    width : 75%;
+    height: 0px;
+    background: #d9d9d9;
+    margin : 40px auto;
+}
+
+.filter span{
+    padding : 10%;
+    background : #2d2f31;
+    color : white;
+    font-size : 1.2em;
+    font-variant : small-caps;
+    cursor : pointer;
+    display: block;
+}
+
+.filter span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+}
+
+.slide {
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+}
+
+/* Space between elements in the list */
+.slide li {
+    padding : 10%;
+}
+
+.touch {position: absolute; opacity: 0; height: 0px;}
+
+#touch1:checked + #slide1,
+#touch2:checked + #slide2 {
+    height: 300px;
+}
+/* Shopfilter li means li elements inside Shopfilter  */
+/* Center the li elements inside the div */
+/* .shopfilter li{
 
 } */
-
 
 .uitgelicht{
 
@@ -115,6 +186,7 @@ html {
 
 #uit_text{
     position: absolute;
+
 
 }
 
@@ -148,16 +220,25 @@ footer {
 .logo {
     font-size: 25px;
     text-decoration: none;
+    font-family: kendoFont;
+
 
     color: black;
 
     position: relative;
 }
 
+.logo:hover {
+    border-bottom: 0px solid rgb(0, 0, 0);
+}
+
+
 .content {
 
     /* display: flex; */
-    padding: 4em;
+    padding: 6em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
 }
 
@@ -231,8 +312,8 @@ footer {
     width: 100%;
 
     height: auto;
-    padding: 2em;
-    padding-top: 3em;
+    /* padding: 2em; */
+    padding-top: 2em;
 }
 
 #cross
@@ -311,7 +392,7 @@ footer {
 
     text-align: center;
 
-    border: #3e3e3e 4px solid;
+    border: #3e3e3e 3px solid;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(27, 27, 27, 0.836);
 
@@ -340,6 +421,7 @@ footer {
 @media(max-width: 768px) {
     .hamburger {
         display: block;
+
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -360,7 +442,7 @@ footer {
     }
 
     .navbar{
-        position: fixed;
+        position: absolute;
         left: -100%;
         top: 4em;
         gap: 0;
@@ -371,6 +453,7 @@ footer {
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        z-index: 100;
     }
 
     .navbar.active{
