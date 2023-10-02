@@ -7,6 +7,7 @@
 
             shopfilter and mens have both a margin, this has to be
 
+            mens and womens have a margin on the right side on the home page, this has to be removed
 */
 
 /* Maybe change to images <_< */
@@ -69,6 +70,93 @@ html {
 
 }
 
+.navbar{
+    margin-left: auto;
+}
+
+/* Shopping cart */
+.cart{
+    /* flex-direction: row; */
+    margin-left: auto;
+    /* margin-right: auto; */
+    width: 32px;
+    height: 32px;
+    transition: 0.5s;
+}
+.cart:hover{
+    transform: scale(1.1);
+}
+
+/* Shopping cart start */
+.shopping-bag {
+    display: none;
+    top: 0;
+    right: 0;
+    transform: translate(-20%, 30%);
+    position:absolute;
+    z-index: 100;
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.shopping-bag h2 {
+    margin-bottom: 10px;
+}
+
+.shopping-bag ul {
+    padding: 0;
+    list-style: none;
+}
+
+.shopping-bag ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Add a border between items */
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #555;
+}
+
+/* End shop */
+
 /* Line buttons */
 .navbutton {
     border-bottom: 0px solid rgb(0, 0, 0);
@@ -101,32 +189,36 @@ html {
 }
 
 .shopfilter {
-    background-color: brown;
-    width: 10em;
+    background-color: rgb(255, 213, 213);
+    width: 15em;
     flex-direction: row;
     border-radius: 10px;
-    margin: 2em;
-    height: 982px;
+    margin-left: 2em;
+    height: 100%;
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    list-style-position: inside;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* list-style-position:inside; */
 }
 
 .filter{
     width : 75%;
-    height: 0px;
-    background: #d9d9d9;
-    margin : 40px auto;
+    /* height: 0px; */
+    border-radius: 20px;
+    background: #d3bfbf;
+    margin : 1em auto 1em;
 }
 
 .filter span{
-    padding : 10%;
+    padding : 5%;
     background : #2d2f31;
     color : white;
+    border-radius: 20px 20px 0px 0px;
     font-size : 1.2em;
-    font-variant : small-caps;
+    font-family: 'Quicksand';
+    /* font-variant : small-caps; */
     cursor : pointer;
     display: block;
 }
@@ -142,13 +234,13 @@ html {
     width:100%;
     height:0px;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
     transition: height .4s ease;
 }
 
 /* Space between elements in the list */
 .slide li {
-    padding : 10%;
+    padding : 5%;
 }
 
 .touch {position: absolute; opacity: 0; height: 0px;}
@@ -260,7 +352,9 @@ footer {
 
 .profile:hover{
     box-shadow: #38384a 0px 0px 10px 0px;
+    cursor: pointer;
 }
+
 
 .profile_text{
     margin: auto;
@@ -293,6 +387,11 @@ footer {
     gap: 2em;
 }
 
+/* Controls mens/womens and the shopfilter top padding */
+.top-padding{
+    padding-top: 2em;
+}
+
 /* Is The diffrent products */
 #mens,
 #womens {
@@ -312,8 +411,7 @@ footer {
     width: 100%;
 
     height: auto;
-    /* padding: 2em; */
-    padding-top: 2em;
+    padding-right: 2em;
 }
 
 #cross
@@ -396,10 +494,13 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(27, 27, 27, 0.836);
 
+    transition: .3s height;
 
 
     padding: 2em;
 }
+
+
 
 .hamburger {
     display: none;
@@ -414,6 +515,24 @@ footer {
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
     background-color: white;
+
+}
+
+@media (max-width: 838px) {
+    .shopfilter{
+        display: none;
+    }
+    #mens, #womens {
+        padding: 0 1em 0 1em;
+    }
+}
+
+@media (max-width: 565px) {
+    .shopping-bag {
+        font-size: 0.8em;
+        width: 50%;
+
+    }
 
 }
 

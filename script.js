@@ -86,3 +86,8 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "unset";
 }
+
+function toggleShoppingBag() {
+  const shoppingBag = document.getElementById('shoppingBag');
+  shoppingBag.style.display = (shoppingBag.style.display === 'none' || shoppingBag.style.display === '') ? 'block' : 'none';
+}
