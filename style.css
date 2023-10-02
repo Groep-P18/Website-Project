@@ -392,6 +392,9 @@ footer {
     padding-top: 2em;
 }
 
+.right-padding{
+    padding-right: 2em;
+}
 /* Is The diffrent products */
 #mens,
 #womens {
@@ -411,7 +414,6 @@ footer {
     width: 100%;
 
     height: auto;
-    padding-right: 2em;
 }
 
 #cross
