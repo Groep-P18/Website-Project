@@ -1,6 +1,21 @@
-function openShop(foto1, text) {
+const preview = document.getElementById("preview_item");
 
-    updatePreview(foto1, text);
+const hamburger = document.querySelector(".hamburger");
+const navBar = document.querySelector(".navbar");
+let slideIndex = 1;
+
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navBar.classList.toggle("active");
+    console.log("clicked");
+})
+
+
+
+function openShop(foto1, foto2, foto3, text) {
+
+    updatePreview(foto1, foto2, foto3, text);
 
 
 
@@ -33,26 +48,46 @@ function openShop(foto1, text) {
     }
 
 }
+// Move to openShop, because it's ugly
+function updatePreview(foto1, foto2, foto3, text) {
 
-function updatePreview(foto1, text) {
 
-    const preview = document.getElementById("preview_item");
 
-    let preview_img = document.getElementById("preview_img");
+    let preview_img1 = document.getElementById("preview_img1");
+    let preview_img2 = document.getElementById("preview_img2");
+    let preview_img3 = document.getElementById("preview_img3");
+
     let preview_text = document.getElementById("preview_text");
 
-    preview_img.src = foto1;
+    preview_img1.src = foto1;
+    preview_img2.src = foto2;
+    preview_img3.src = foto3;
+
     preview_text.innerHTML = text;
 
 
 
 }
 
-const hamburger = document.querySelector(".hamburger");
-const navBar = document.querySelector(".navbar");
 
+showDivs(slideIndex);
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navBar.classList.toggle("active");
-})
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  let i;
+  let x = document.getElementsByClassName("preview_img");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "unset";
+}
+
+function toggleShoppingBag() {
+  const shoppingBag = document.getElementById('shoppingBag');
+  shoppingBag.style.display = (shoppingBag.style.display === 'none' || shoppingBag.style.display === '') ? 'block' : 'none';
+}

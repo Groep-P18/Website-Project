@@ -16,18 +16,18 @@
         <header class="header">
 
 
-            <a href="index.html" class="logo">
-               <p>Kendo</p>
-            </a>
+
 
             <nav class="navbar">
 
                 <a href="index.html" class="navbutton">Home</a>
                 <a href="shop.html" class="navbutton">Shop</a>
+                <a href="index.html" class="navbutton logo">Kendo</a>
                 <a href="about.html" class="navbutton">About us</a>
                 <a href="contact.html" class="navbutton">Contact</a>
 
             </nav>
+
 
 
             <div class="hamburger">
@@ -36,6 +36,12 @@
                 <span class="bar"></span>
             </div>
 
+            <!-- Shopping cart -->
+            <div class="cart">
+                <span onclick="toggleShoppingBag()">
+                    <img class="shopping-cart" src="fotos/icons/bag.png" alt="" srcset="" width="32px" height="32px" >
+                </span>
+            </div>
 
 
         </header>
@@ -44,10 +50,157 @@
 
 
 
-        <div class="flexcontainer">
-            <!-- Everything will be in here -->
-            <div class="content">
 
+        <div class="flexcontainer">
+
+            <div class="filterandshop top-padding right-padding">
+                <div class="shopfilter ">
+                    <nav class="filter">
+                        <label for="touch1"><span>Maat</span></label>
+                        <input class="touch" type="checkbox" id="touch1">
+                        <ul class="slide" id="slide1">
+                            <li><button>Submit</button></li>
+                            <li><a href="#">Happy</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="filter">
+                        <label for="touch2"><span>Type</span></label>
+                        <input class="touch" type="checkbox" id="touch2">
+                        <ul class="slide" id="slide2">
+                            <li><button>Submit</button></li>
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <ul id="mens">
+
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis doloremque sit recusandae. Soluta dicta inventore laborum cumque! Aut fuga ducimus odio inventore. Voluptas quia laboriosam dolores at, nam dolore.')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis doloremque sit recusandae. Soluta dicta inventore laborum cumque! Aut fuga ducimus odio inventore. Voluptas quia laboriosam dolores at, nam dolore.')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis doloremque sit recusandae. Soluta dicta inventore laborum cumque! Aut fuga ducimus odio inventore. Voluptas quia laboriosam dolores at, nam dolore.')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/kleding_test.jpg', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis doloremque sit recusandae. Soluta dicta inventore laborum cumque! Aut fuga ducimus odio inventore. Voluptas quia laboriosam dolores at, nam dolore.')">
+                            <img class="shopitem_image"
+                                src="fotos/kleding_test.jpg"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+
+
+            <div class="content">
                 <h1>Lorem, ipsum.</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit rem quo labore ducimus veniam nulla
                     distinctio
@@ -55,9 +208,6 @@
                     voluptate
                     tempore, exercitationem aut.
                 </p>
-
-
-
             </div>
 
 
@@ -65,11 +215,10 @@
         <!-- This will be the foot of the website -->
 
 
+
+
+
         <footer>
-
-
-
-
             <p>Copyright Kendo All rights reserved</p>
 
 
@@ -79,24 +228,76 @@
                 <a href="http://twitter.com"><span class="gg-facebook"></span></a>
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
         </footer>
 
     </div>
 
     <script src="script.js"></script>
 
+    <!-- Shopping cart -->
+    <div class="shopping-bag text-scale" id="shoppingBag">
+        <h2>Your Shopping Bag</h2>
+        <ul>
+            <li>
+                <div class="item">
+                    <img src="product1.jpg" alt="Product 1">
+                    <div class="item-details">
+                        <h3>Product 1</h3>
+                        <p>Size: Medium, Color: Red</p>
+                        <p>$20.00</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="product2.jpg" alt="Product 2">
+                    <div class="item-details">
+                        <h3>Product 2</h3>
+                        <p>Size: Small, Color: Blue</p>
+                        <p>$15.00</p>
+                    </div>
+                </div>
+            </li>
+            <!-- Add more items as needed -->
+        </ul>
+        <div class="total">
+            <span>Total:</span>
+            <span>$35.00</span>
+        </div>
+        <button class="checkout-button">Checkout</button>
+    </div>
 
+    <!-- Moved to javascript, the images are now custom -->
+    <div id="preview_item" style="display: none;">
+
+        <img class="preview_img" id="preview_img1" src="" width="75" height="auto" alt="">
+        <img class="preview_img" id="preview_img2" src="" width="75" height="auto" alt="" style="display: none;">
+        <img class="preview_img" id="preview_img3" src="" width="75" height="auto" alt="" style="display: none;">
+
+
+        <div id="cross" onclick="openShop()">
+            <i class="gg-close"></i>
+        </div>
+
+        <div class="w3-content w3-display-container">
+            <div class="w3-center w3-display-bottommiddle" style="width:100%">
+              <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+              <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+              <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+              <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+              <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+            </div>
+          </div>
+
+        <p id="preview_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rem molestiae
+            facere explicabo natus,
+            labore aliquid, laboriosam dolorem quibusdam cum! Inventore totam alias voluptatum assumenda. Cum provident
+            voluptatum magnam iste sequi ipsam distinctio magni officiis perferendis, ab minus consequuntur esse
+            recusandae, nihil dolores labore saepe quisquam, maxime praesentium itaque maiores enim? Et fuga quos
+            mollitia perferendis ea, at dolores magni perspiciatis aperiam, accusamus nam consectetur omnis dolor. Et,
+            quam dolorem asperiores saepe nihil nulla voluptate perferendis quidem provident sint fugit, rerum, optio
+            obcaecati?.</p>
+    </div>
 
 
 </body>

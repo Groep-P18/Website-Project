@@ -5,7 +5,9 @@
 
             Center buttons in navbar
 
+            shopfilter and mens have both a margin, this has to be
 
+            mens and womens have a margin on the right side on the home page, this has to be removed
 */
 
 /* Maybe change to images <_< */
@@ -15,6 +17,12 @@
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+@font-face {
+    font-family: kendoFont;
+    src: url("kendo_font.ttf");
+}
+
 
 * {
     margin: 0;
@@ -53,7 +61,7 @@ html {
     padding: 1.5em;
     background-color: rgb(244, 93, 93);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* Vertical */
     align-items: center;
     /* Infort of */
@@ -61,6 +69,93 @@ html {
     box-shadow: 0px 5px 5px 0px rgba(72, 72, 72, 0.481);
 
 }
+
+.navbar{
+    margin-left: auto;
+}
+
+/* Shopping cart */
+.cart{
+    /* flex-direction: row; */
+    margin-left: auto;
+    /* margin-right: auto; */
+    width: 32px;
+    height: 32px;
+    transition: 0.5s;
+}
+.cart:hover{
+    transform: scale(1.1);
+}
+
+/* Shopping cart start */
+.shopping-bag {
+    display: none;
+    top: 0;
+    right: 0;
+    transform: translate(-20%, 30%);
+    position:absolute;
+    z-index: 100;
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.shopping-bag h2 {
+    margin-bottom: 10px;
+}
+
+.shopping-bag ul {
+    padding: 0;
+    list-style: none;
+}
+
+.shopping-bag ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Add a border between items */
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #555;
+}
+
+/* End shop */
 
 /* Line buttons */
 .navbutton {
@@ -87,10 +182,78 @@ html {
     border-bottom: 8px solid rgb(0, 0, 0);
 }
 
-/* .flexcontainer{
+.filterandshop{
+    display: flex;
+    gap: 2em;
+    /* flex-wrap: nowrap; */
+}
+
+.shopfilter {
+    background-color: rgb(255, 213, 213);
+    width: 15em;
+    flex-direction: row;
+    border-radius: 10px;
+    margin-left: 2em;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* list-style-position:inside; */
+}
+
+.filter{
+    width : 75%;
+    /* height: 0px; */
+    border-radius: 20px;
+    background: #d3bfbf;
+    margin : 1em auto 1em;
+}
+
+.filter span{
+    padding : 5%;
+    background : #2d2f31;
+    color : white;
+    border-radius: 20px 20px 0px 0px;
+    font-size : 1.2em;
+    font-family: 'Quicksand';
+    /* font-variant : small-caps; */
+    cursor : pointer;
+    display: block;
+}
+
+.filter span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+}
+
+.slide {
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: left;
+    transition: height .4s ease;
+}
+
+/* Space between elements in the list */
+.slide li {
+    padding : 5%;
+}
+
+.touch {position: absolute; opacity: 0; height: 0px;}
+
+#touch1:checked + #slide1,
+#touch2:checked + #slide2 {
+    height: 300px;
+}
+/* Shopfilter li means li elements inside Shopfilter  */
+/* Center the li elements inside the div */
+/* .shopfilter li{
 
 } */
-
 
 .uitgelicht{
 
@@ -115,6 +278,7 @@ html {
 
 #uit_text{
     position: absolute;
+
 
 }
 
@@ -148,22 +312,31 @@ footer {
 .logo {
     font-size: 25px;
     text-decoration: none;
+    font-family: kendoFont;
+
 
     color: black;
 
     position: relative;
 }
 
+.logo:hover {
+    border-bottom: 0px solid rgb(0, 0, 0);
+}
+
+
 .content {
 
     /* display: flex; */
-    padding: 4em;
+    padding: 6em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
 }
 
 
 .profile{
-    /* Create a small box that has a title, text and on the right side a profile picture*/
+    /* Create a small box that has a title, text and on the right side a profile picture on the left*/
 
     display: flex;
     gap: 1em 1em;
@@ -171,9 +344,17 @@ footer {
     /* justify-content: center; */
     /* size: auto auto; */
 
+    transition: .5s;
+
     border: black 2px solid;
 
 }
+
+.profile:hover{
+    box-shadow: #38384a 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
 
 .profile_text{
     margin: auto;
@@ -206,6 +387,14 @@ footer {
     gap: 2em;
 }
 
+/* Controls mens/womens and the shopfilter top padding */
+.top-padding{
+    padding-top: 2em;
+}
+
+.right-padding{
+    padding-right: 2em;
+}
 /* Is The diffrent products */
 #mens,
 #womens {
@@ -225,8 +414,6 @@ footer {
     width: 100%;
 
     height: auto;
-    padding: 2em;
-    padding-top: 3em;
 }
 
 #cross
@@ -276,7 +463,7 @@ footer {
 
 }
 
-#preview_img{
+.preview_img{
     width: 75%;
     height: auto;
 
@@ -305,14 +492,17 @@ footer {
 
     text-align: center;
 
-    border: #3e3e3e 4px solid;
+    border: #3e3e3e 3px solid;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(27, 27, 27, 0.836);
 
+    transition: .3s height;
 
 
-    padding: 2em 2em 2em 2em;
+    padding: 2em;
 }
+
+
 
 .hamburger {
     display: none;
@@ -330,10 +520,29 @@ footer {
 
 }
 
+@media (max-width: 838px) {
+    .shopfilter{
+        display: none;
+    }
+    #mens, #womens {
+        padding: 0 1em 0 1em;
+    }
+}
+
+@media (max-width: 565px) {
+    .shopping-bag {
+        font-size: 0.8em;
+        width: 50%;
+
+    }
+
+}
+
 /* If our screen-width is less than 768 pixels, create a hamburger menu */
 @media(max-width: 768px) {
     .hamburger {
         display: block;
+
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -354,7 +563,7 @@ footer {
     }
 
     .navbar{
-        position: fixed;
+        position: absolute;
         left: -100%;
         top: 4em;
         gap: 0;
@@ -365,6 +574,7 @@ footer {
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        z-index: 100;
     }
 
     .navbar.active{
