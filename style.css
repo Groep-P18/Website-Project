@@ -200,7 +200,18 @@ html {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
+
     /* list-style-position:inside; */
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 .filter{
@@ -235,7 +246,12 @@ html {
     height:0px;
     overflow: hidden;
     text-align: left;
+    list-style: none;
     transition: height .4s ease;
+}
+
+.top-padding.flex.right{
+    display: none;
 }
 
 /* Space between elements in the list */
@@ -243,12 +259,23 @@ html {
     padding : 5%;
 }
 
+.flex{
+    display: flex;
+}
+
+.right{
+    justify-content: flex-end;
+    padding-right: 2em;
+}
+
 .touch {position: absolute; opacity: 0; height: 0px;}
 
-#touch1:checked + #slide1,
-#touch2:checked + #slide2 {
+/* Bye bye repetition */
+*[id^='touch']:checked + *[id^='slide'] {
     height: 300px;
 }
+
+
 /* Shopfilter li means li elements inside Shopfilter  */
 /* Center the li elements inside the div */
 /* .shopfilter li{
@@ -341,9 +368,12 @@ footer {
     display: flex;
     gap: 1em 1em;
 
+
+
     /* justify-content: center; */
     /* size: auto auto; */
-
+    flex: 1;
+    align-items: center;
     transition: .5s;
 
     border: black 2px solid;
@@ -371,9 +401,21 @@ footer {
 }
 
 
-.contact_form{
+.contact_items{
     display: flex;
     flex-direction: column;
+
+}
+
+.format-input{
+
+}
+
+.form{
+    border: 0;
+    outline: 0;
+    border-bottom: 3px solid gray;
+    /* border-style: none; */
 
 }
 
@@ -404,7 +446,7 @@ footer {
 
     list-style: none;
     display: flex;
-    margin: auto;
+    margin-bottom: auto;
 
     gap: 2em;
     text-align: center;
@@ -526,6 +568,9 @@ footer {
     }
     #mens, #womens {
         padding: 0 1em 0 1em;
+    }
+    .top-padding.flex.right{
+        display: flex;
     }
 }
 
