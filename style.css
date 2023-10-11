@@ -361,6 +361,33 @@ footer {
 
 }
 
+.content center h1{
+
+    border-bottom: black 4px solid;
+}
+
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    align-items: flex-start;
+    border: #2d2f31 2px solid;
+}
+
+.image-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: red;
+    flex-shrink: 0;
+    width: 25%;
+    border: #2d2f31 2px solid;
+}
 
 .profile{
     /* Create a small box that has a title, text and on the right side a profile picture on the left*/

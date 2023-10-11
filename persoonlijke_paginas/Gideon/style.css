@@ -5,7 +5,6 @@
 
         }
 
-
         .heading {
             width: 90%;
             display: flex;
@@ -17,12 +16,8 @@
         }
 
         .container {
- 
-    		margin: 0;
-    		position: absolute;
-    		left: 200px;
-    		padding: 0;
-    		bottom: 0;
+            display: flex;
+
 		}
 
 
@@ -35,17 +30,17 @@
 
         .about-imge {
             max-width: 100%;
-            margin: 0 auto; 
+            margin: 0 auto;
+            margin-bottom: 100px;
         }
 
         .about-imge img {
 
-			width: 500px;
-			height: 500px;
-            display: block;
+			width: 100%;
+            max-width: 500px;
+            /* min-width: 128px; */
+			height: height;
             transition: 0.5s ease;
-
-
 
         }
 
@@ -79,13 +74,25 @@
             border-radius: 25px;
             margin-top: 15px;
             transition: 0.3s ease;
+            margin-bottom: 90px;
         }
 
-        .about-content .read-more:hover {
+        .read-more {
             background-color: #48cfcc;
         }
 
-        @media screen and (max-width: 768px) {
+        .read-more:hover {
+            background-color: #68807f;
+
+        }
+
+        @media (max-width: 845px){
+            .about{
+                flex-direction: column;
+            }
+        }
+
+        /* @media screen and (max-width: 768px) {
             .heading {
                 padding: 0px 20px;
             }
@@ -97,6 +104,7 @@
             .heading p {
                 font-size: 17px;
                 margin-bottom: 0px;
+                padding-bottom: 0px;
             }
 
             .container {
@@ -121,23 +129,4 @@
             .about-content .read-more {
                 font-size: 16px;
             }
-
-			.footer {
-    			background-color: #48cfcc;
-    			padding: 10px;
-    			text-align: center;
-    			position: fixed;
-    			bottom: 0;
-    			width: 100%;
-			}
-
-			.header {
-  				background-color: #48cfcc;
-  				padding: 20px;
-  				text-align: center;
-  				position: fixed;
-  				top: 0;
-  				width: 100%;
-		}
-
-}
+        } */

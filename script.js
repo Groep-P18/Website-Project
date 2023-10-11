@@ -2,6 +2,8 @@ const preview = document.getElementById("preview_item");
 
 const hamburger = document.querySelector(".hamburger");
 const navBar = document.querySelector(".navbar");
+// Make const?
+let shoppingBag = document.getElementById('shoppingBag');
 let slideIndex = 1;
 
 
@@ -11,7 +13,15 @@ hamburger.addEventListener("click", () => {
     console.log("clicked");
 })
 
-
+function openAbout(person) {
+  switch (person) {
+    case "gideon":
+      window.location='persoonlijke_paginas/Gideon'
+      break;
+    default:
+      break;
+  }
+}
 
 function openShop(foto1, foto2, foto3, text) {
 
@@ -51,21 +61,11 @@ function openShop(foto1, foto2, foto3, text) {
 // Move to openShop, because it's ugly
 function updatePreview(foto1, foto2, foto3, text) {
 
+  document.getElementById("preview_img1").src = foto1;
+  document.getElementById("preview_img2").src = foto2;
+  document.getElementById("preview_img3").src = foto3;
 
-
-    let preview_img1 = document.getElementById("preview_img1");
-    let preview_img2 = document.getElementById("preview_img2");
-    let preview_img3 = document.getElementById("preview_img3");
-
-    let preview_text = document.getElementById("preview_text");
-
-    preview_img1.src = foto1;
-    preview_img2.src = foto2;
-    preview_img3.src = foto3;
-
-    preview_text.innerHTML = text;
-
-
+  document.getElementById("preview_text").innerHTML = text;
 
 }
 
@@ -88,6 +88,5 @@ function showDivs(n) {
 }
 
 function toggleShoppingBag() {
-  const shoppingBag = document.getElementById('shoppingBag');
   shoppingBag.style.display = (shoppingBag.style.display === 'none' || shoppingBag.style.display === '') ? 'block' : 'none';
 }

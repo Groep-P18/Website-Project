@@ -3,54 +3,77 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        .header {
-            background-color: #48cfcc;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
 
-        .footer {
-            background-color: #48cfcc;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="heading">
-        <h1>About Me</h1>
-        <p>Hey welcome!</p>
+    <header class="header">
+
+
+
+
+        <nav class="navbar">
+
+            <a href="/index.html" class="navbutton">Home</a>
+            <a href="/shop.html" class="navbutton">Shop</a>
+            <a href="/index.html" class="navbutton logo">Kendo</a>
+            <a href="/about.html" class="navbutton">About us</a>
+            <a href="/contact.html" class="navbutton">Contact</a>
+
+        </nav>
+
+
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Shopping cart -->
+        <div class="cart">
+            <a href="cart.html">
+                <img class="shopping-cart" src="/fotos/icons/bag.png" alt="" srcset="" width="32px" height="32px">
+            </a>
+        </div>
+
+
+    </header>
+
+
+    <div class="content">
+        <center>
+            <h1>About Me</h1>
+        </center>
+
+
+
+
+        <div class="heading">
+            <p>Hey welcome!</p>
+        </div>
+
+        <div class="container">
+            <section class="about">
+                <div class="about-imge">
+                    <img src="/persoonlijke_paginas/Gideon/Ronde foto van mij.png" alt="This is a photo of me">
+                </div>
+                <div class="about-content">
+                    <h2>So, who am I?</h2>
+                    <p style="margin: 0px; padding: 0px;">
+                    Hey my name is Gideon and i am the team maniger here at Kendo,
+                    I manige everywons work and look at whats needs to be done.
+                    </p>
+                    <a href="https://www.instagram.com/arcane_designs_/" target="_blank" class="read-more">Portfolio</a>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <div class="container">
-        <section class="about">
-            <div class="about-imge">
-                <img src="file:///C:/Users/gideo/Desktop/Website%20project/Ronde%20foto%20van%20mij.png" alt="This is a photo of me">
-            </div>
-            <div class="about-content">
-                <h2>So, who am I?</h2>
-                <p>In the quiet corners of the cosmos...</p>
-                <a href="" class="read-more">Read more</a>
-            </div>
-        </section>
-    </div>
-
-
-    <div class="header">
-        <p>This is the header content.</p>
-    </div>
-
-
-    <div class="footer">
-        <p>This is the footer content.</p>
-    </div>
+    <footer>
+        <center><p>Copyright Kendo All rights reserved</p></center>
+    </footer>
+    <script src="/script.js"></script>
 </body>
 </html>
