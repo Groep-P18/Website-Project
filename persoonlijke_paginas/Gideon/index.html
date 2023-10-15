@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="/persoonlijke_paginas/about_style.css">
 </head>
+
 <body>
     <header class="header">
 
@@ -33,9 +34,9 @@
 
         <!-- Shopping cart -->
         <div class="cart">
-            <a href="cart.html">
-                <img class="shopping-cart" src="/fotos/icons/bag.png" alt="" srcset="" width="32px" height="32px">
-            </a>
+            <span onclick="toggleShoppingBag()">
+                <img class="shopping-cart" src="fotos/icons/bag.png" alt="" srcset="" width="32px" height="32px" >
+            </span>
         </div>
 
 
@@ -56,14 +57,21 @@
 
         <div class="container">
             <section class="about">
-                <div class="about-imge">
-                    <img src="/persoonlijke_paginas/Gideon/Ronde foto van mij.png" alt="This is a photo of me">
-                </div>
+                <img id="allister" src="/persoonlijke_paginas/Gideon/profile.png" alt="This is a photo of me">
                 <div class="about-content">
-                    <h2>So, who am I?</h2>
+                    <h2>Wie ben ik?</h2>
                     <p style="margin: 0px; padding: 0px;">
-                    Hey my name is Gideon and i am the team maniger here at Kendo,
-                    I manige everywons work and look at whats needs to be done.
+                        Hoi, ik ben Gideon! Ik ben geboren in Nederland, ik ben iemand die houdt van een actieve
+                        levensstijl en een passie heeft voor sport. Naast mijn liefde voor sport ben ik ook gefascineerd
+                        door de wereld van 3D-programma's.
+
+                        Dus, of ik nu mijn grenzen verleg op het sportveld of mijn creatieve grenzen in de digitale
+                        ruimte, ik ben altijd klaar voor nieuwe avonturen en ontdekkingen
+                        <br>
+
+                        Als ik bezig ben met het modelleren van nieuwe werelden, geniet ik ervan om de mogelijkheden van
+                        3D-technologie
+                        te verkennen.
                     </p>
                     <a href="https://www.instagram.com/arcane_designs_/" target="_blank" class="read-more">Portfolio</a>
                 </div>
@@ -72,8 +80,43 @@
     </div>
 
     <footer>
-        <center><p>Copyright Kendo All rights reserved</p></center>
+        <center>
+            <p>Copyright Kendo All rights reserved</p>
+        </center>
     </footer>
+        <!-- Shopping cart -->
+        <div class="shopping-bag text-scale" id="shoppingBag">
+            <h2>Your Shopping Bag</h2>
+            <ul>
+                <li>
+                    <div class="item">
+                        <img src="product1.jpg" alt="Product 1">
+                        <div class="item-details">
+                            <h3>Product 1</h3>
+                            <p>Size: Medium, Color: Red</p>
+                            <p>$20.00</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <img src="product2.jpg" alt="Product 2">
+                        <div class="item-details">
+                            <h3>Product 2</h3>
+                            <p>Size: Small, Color: Blue</p>
+                            <p>$15.00</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more items as needed -->
+            </ul>
+            <div class="total">
+                <span>Total:</span>
+                <span>$35.00</span>
+            </div>
+            <button class="checkout-button">Checkout</button>
+        </div>
     <script src="/script.js"></script>
 </body>
+
 </html>

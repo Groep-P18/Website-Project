@@ -1,0 +1,134 @@
+@import "/style.css";
+
+body {
+    font-family: 'Helvetica Black Condensed', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+
+}
+
+.heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.about-imge {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.about img {
+
+    width: 100%;
+    max-width: 384px;
+    min-width: 256px;
+    max-height: 384px;
+    height: auto;
+    border-radius: 100%;
+    border: black 6px solid;
+    margin: 2em;
+
+    transition: 0.5s ease;
+
+}
+
+.about-imge:hover img {
+    transform: scale(1.1);
+}
+
+.about-content {
+    flex: 1;
+    order: 1;
+}
+
+.about-content h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.about-content .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+    /* margin-bottom: 90px; */
+}
+
+.read-more {
+    background-color: #48cfcc;
+}
+
+.read-more:hover {
+    background-color: #68807f;
+
+}
+
+@media (max-width: 845px){
+    .about{
+        flex-direction: column;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .heading {
+        padding: 0px 20px;
+    }
+
+    .heading h1 {
+        font-size: 36px;
+    }
+
+    .heading p {
+        font-size: 17px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .container {
+        padding: 0px;
+    }
+
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .about-imge {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .about-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .about-content .read-more {
+        font-size: 16px;
+    }
+} */

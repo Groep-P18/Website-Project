@@ -3,7 +3,6 @@ const preview = document.getElementById("preview_item");
 const hamburger = document.querySelector(".hamburger");
 const navBar = document.querySelector(".navbar");
 // Make const?
-let shoppingBag = document.getElementById('shoppingBag');
 let slideIndex = 1;
 
 
@@ -12,16 +11,6 @@ hamburger.addEventListener("click", () => {
     navBar.classList.toggle("active");
     console.log("clicked");
 })
-
-function openAbout(person) {
-  switch (person) {
-    case "gideon":
-      window.location='persoonlijke_paginas/Gideon'
-      break;
-    default:
-      break;
-  }
-}
 
 function openShop(foto1, foto2, foto3, text) {
 
@@ -78,15 +67,30 @@ function plusDivs(n) {
 
 function showDivs(n) {
   let i;
-  let x = document.getElementsByClassName("preview_img");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  x[slideIndex-1].style.display = "unset";
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
 
 function toggleShoppingBag() {
-  shoppingBag.style.display = (shoppingBag.style.display === 'none' || shoppingBag.style.display === '') ? 'block' : 'none';
+  let shoppingBag = document.getElementById("shoppingBag");
+  if(shoppingBag.style.transform === "") {
+    shoppingBag.style.transform = "translate(-20%, 30%)";
+
+    console.log("open shopping bag");
+  }
+  else {
+    shoppingBag.style.transform = "";
+  }
+  // shoppingBag.style.display = (shoppingBag.style.transform === 'translate(-20%, 30%)' || shoppingBag.style.transform === '') ? 'translate(-0%, 30%)' : 'translate(-20%, 30%)';
 }
+

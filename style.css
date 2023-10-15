@@ -5,9 +5,6 @@
 
             Center buttons in navbar
 
-            shopfilter and mens have both a margin, this has to be
-
-            mens and womens have a margin on the right side on the home page, this has to be removed
 */
 
 /* Maybe change to images <_< */
@@ -46,7 +43,7 @@ html {
     scroll-behavior: smooth;
 }
 
-#contentbody {
+main {
     filter: none;
 
 
@@ -89,17 +86,20 @@ html {
 
 /* Shopping cart start */
 .shopping-bag {
-    display: none;
+
     top: 0;
     right: 0;
-    transform: translate(-20%, 30%);
-    position:absolute;
+    display: inline-block;
+
+    transform: translate(100%, 30%);
+    position:fixed;
     z-index: 100;
     background-color: white;
     width: 300px;
     padding: 20px;
     border: 2px solid #333;
     border-radius: 10px;
+    transition: .3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
@@ -283,17 +283,14 @@ button {
 } */
 
 .uitgelicht{
-
-    /* background-image: url("https://media.istockphoto.com/id/1350036914/vector/vector-cartoon-background-with-color-abstract-dots.jpg?s=612x612&w=0&k=20&c=1XVtlTiz80yMFlf1xJc58kc9MfYJszIrtUEI4cotV6k="); */
-
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-    /* background-color: royalblue; */
 }
 
 .uitgelicht_img{
-    width: 90%;
+    width: 25%;
+    min-width: 256px;
+    max-height: 25%;
 
     text-align: center;
 
@@ -301,12 +298,6 @@ button {
 
 
     background-color: red;
-}
-
-#uit_text{
-    position: absolute;
-
-
 }
 
 footer {
@@ -352,6 +343,100 @@ footer {
 }
 
 
+.slide-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mySlides {display: none}
+
+/* Slideshow container */
+.slideshow-container {
+    /* max-width: 1000px; */
+    /* position: relative; */
+    margin: auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    /* position: absolute; */
+    /* top: 50%; */
+    width: auto;
+    padding: 16px;
+    /* margin-top: -22px; */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+  }
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
 .content {
 
     /* display: flex; */
@@ -395,6 +480,7 @@ footer {
     display: flex;
     gap: 1em 1em;
 
+    text-decoration: none;
 
 
     /* justify-content: center; */
@@ -533,9 +619,10 @@ footer {
 }
 
 .preview_img{
-    width: 75%;
+    width: 100%;
+    min-width: 235px;
+    max-width: 512px;
     height: auto;
-
 }
 
 #preview_item {
@@ -556,7 +643,7 @@ footer {
 
     background-color: white;
 
-    width: 45%;
+    width: auto;
     height: auto;
 
     text-align: center;
@@ -591,7 +678,16 @@ footer {
 
 @media (max-width: 838px) {
     .shopfilter{
-        display: none;
+        position: absolute;
+        top: 5em;
+        flex-wrap: nowrap;
+        height: auto;
+        z-index: 99;
+    }
+
+    .filterandshop{
+        justify-content: center;
+
     }
     #mens, #womens {
         padding: 0 1em 0 1em;
