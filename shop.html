@@ -54,7 +54,7 @@
         <div class="flexcontainer">
 
             <div class="top-padding flex right">
-                <button class="button">Filter</button>
+                <button class="button" onclick="showFilter()">Filter</button>
             </div>
 
 
@@ -63,7 +63,7 @@
 
 
 
-                <div class="shopfilter ">
+                <div class="shopfilter" id="shopFilter">
                     <nav class="filter">
                         <label for="touch1"><span>Maat</span></label>
                         <input class="touch" type="checkbox" id="touch1">
@@ -137,13 +137,33 @@
                 </div>
 
                 <ul id="mens">
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/tshirt_test/kendo_hoodie.png', 'fotos/tshirt_test/kendo_hoodie.png', 'fotos/tshirt_test/kendo_hoodie.png', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/tshirt_test/kendo_hoodie.png"
+                                alt="">
 
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
 
                     <li>
                         <div class="shopitem"
-                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
+                            onclick="openShop('fotos/tshirt_test/kendo_shirt_1_front.png', 'fotos/tshirt_test/kendo_shirt_1_back.png', '', 'Hello')">
                             <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
+                                src="fotos/tshirt_test/kendo_shirt_1_front.png"
+                                alt="">
+
+                            <p class="shopitem_text">$133 now $65</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="shopitem"
+                            onclick="openShop('fotos/tshirt_test/kendo_shirt_front_2.png', 'fotos/tshirt_test/kendo_shirt_back_2.png', '', 'Hello')">
+                            <img class="shopitem_image"
+                                src="fotos/tshirt_test/kendo_shirt_front_2.png"
                                 alt="">
 
                             <p class="shopitem_text">$133 now $65</p>
@@ -154,29 +174,7 @@
                         <div class="shopitem"
                             onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
                             <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
-                                alt="">
-
-                            <p class="shopitem_text">$133 now $65</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="shopitem"
-                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
-                            <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
-                                alt="">
-
-                            <p class="shopitem_text">$133 now $65</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="shopitem"
-                            onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
-                            <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
+                                src="fotos/tshirt_test/kendo_shirt_white_back1.png"
                                 alt="">
 
                             <p class="shopitem_text">$133 now $65</p>
@@ -187,19 +185,18 @@
                         <div class="shopitem"
                             onclick="openShop('fotos/kleding_test.jpg', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis doloremque sit recusandae. Soluta dicta inventore laborum cumque! Aut fuga ducimus odio inventore. Voluptas quia laboriosam dolores at, nam dolore.')">
                             <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
+                                src="fotos/tshirt_test/kendo socks black-1.png"
                                 alt="">
 
                             <p class="shopitem_text">$133 now $65</p>
                         </div>
                     </li>
 
-
                     <li>
                         <div class="shopitem"
                             onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
                             <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
+                                src="fotos/tshirt_test/kendo sweatpants grey-1.png"
                                 alt="">
 
                             <p class="shopitem_text">$133 now $65</p>
@@ -209,7 +206,7 @@
                         <div class="shopitem"
                             onclick="openShop('fotos/kleding_test.jpg', 'Hello')">
                             <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
+                                src="fotos/tshirt_test/kendo sweatpants black-1.png"
                                 alt="">
 
                             <p class="shopitem_text">$133 now $65</p>
@@ -220,7 +217,7 @@
                         <div class="shopitem"
                             onclick="openShop('fotos/kleding_test.jpg', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis doloremque sit recusandae. Soluta dicta inventore laborum cumque! Aut fuga ducimus odio inventore. Voluptas quia laboriosam dolores at, nam dolore.')">
                             <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
+                                src="fotos/tshirt_test/kendo shorts black-1.png"
                                 alt="">
 
                             <p class="shopitem_text">$133 now $65</p>
@@ -232,10 +229,10 @@
                         <div class="shopitem"
                             onclick="openShop('fotos/kleding_test.jpg', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis doloremque sit recusandae. Soluta dicta inventore laborum cumque! Aut fuga ducimus odio inventore. Voluptas quia laboriosam dolores at, nam dolore.')">
                             <img class="shopitem_image"
-                                src="fotos/kleding_test.jpg"
+                                src="fotos/tshirt_test/kendo shirt 3-1.png"
                                 alt="">
 
-                            <p class="shopitem_text">$133 now $65</p>
+                            <p class="shopitem_text">$13e3 now $65</p>
                         </div>
                     </li>
 
@@ -277,7 +274,8 @@
 
 
         <footer>
-            <center><p>Copyright Kendo All rights reserved</p></center>
+
+            <p>Copyright Kendo© All rights reserved</p>
 
         </footer>
 

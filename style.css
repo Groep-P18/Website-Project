@@ -310,7 +310,7 @@ footer {
     left: 0;
 
     /* Put the text on the right side */
-    text-align: right;
+    text-align: center;
 
 
     color: white;
@@ -602,6 +602,7 @@ footer {
 
 .shopitem_text {
     border-top: 3px solid #555;
+    text-align: left;
 
     /* Use text align for left prices */
     padding: 0.5em;
@@ -680,6 +681,7 @@ footer {
 @media (max-width: 838px) {
     .shopfilter{
         position: absolute;
+        display: none;
         top: 5em;
         flex-wrap: nowrap;
         height: auto;

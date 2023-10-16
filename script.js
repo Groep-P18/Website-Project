@@ -17,6 +17,7 @@ function openShop(foto1, foto2, foto3, text) {
     updatePreview(foto1, foto2, foto3, text);
 
 
+    // showDivs(slideIndex); .
 
     if (document.getElementById("preview_item").style.display == "none") {
 
@@ -59,7 +60,7 @@ function updatePreview(foto1, foto2, foto3, text) {
 }
 
 
-showDivs(slideIndex);
+
 
 function plusDivs(n) {
   showDivs(slideIndex += n);
@@ -91,6 +92,24 @@ function toggleShoppingBag() {
   else {
     shoppingBag.style.transform = "";
   }
+  // shoppingBag.style.display = (shoppingBag.style.transform === 'translate(-20%, 30%)' || shoppingBag.style.transform === '') ? 'translate(-0%, 30%)' : 'translate(-20%, 30%)';
+}
+
+function showFilter() {
+  let filter = document.getElementById("shopFilter");
+
+      console.log("no filter");
+      console.log(filter);
+
+    if(filter.style.display === "" || filter.style.display === "none") {
+      filter.style.display = "inline-flex";
+
+      console.log(filter);
+    }
+    else {
+      filter.style.display = "none";
+    }
+
   // shoppingBag.style.display = (shoppingBag.style.transform === 'translate(-20%, 30%)' || shoppingBag.style.transform === '') ? 'translate(-0%, 30%)' : 'translate(-20%, 30%)';
 }
 
