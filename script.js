@@ -17,7 +17,7 @@ function openShop(foto1, foto2, foto3, text) {
     updatePreview(foto1, foto2, foto3, text);
 
 
-    // showDivs(slideIndex); .
+   showDivs(slideIndex);
 
     if (document.getElementById("preview_item").style.display == "none") {
 

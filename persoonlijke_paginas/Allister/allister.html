@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/persoonlijke_paginas/about_style.css">
+</head>
+
+<body>
+    <header class="header">
+
+
+
+
+        <nav class="navbar">
+
+            <a href="/index.html" class="navbutton">Home</a>
+            <a href="/shop.html" class="navbutton">Shop</a>
+            <a href="/index.html" class="navbutton logo">Kendo</a>
+            <a href="/about.html" class="navbutton">About us</a>
+            <a href="/contact.html" class="navbutton">Contact</a>
+
+        </nav>
+
+
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Shopping cart -->
+        <div class="cart">
+            <span onclick="toggleShoppingBag()">
+                <img class="shopping-cart" src="fotos/icons/bag.png" alt="" srcset="" width="32px" height="32px">
+            </span>
+        </div>
+
+
+    </header>
+
+
+    <div class="content">
+        <center>
+            <h1>About Me</h1>
+        </center>
+
+
+
+
+        <div class="heading">
+            <p>Hey welcome!</p>
+        </div>
+
+        <div class="container">
+            <section class="about">
+                <img id="allister" src="/persoonlijke_paginas/Allister/profiel.png" alt="This is a photo of me">
+                <div class="about-content">
+                    <h2>Wie ben ik?</h2>
+                    <p style="margin: 0px; padding: 0px;">
+                        Hallo, ik ben Allister, ik ben 16 jaar oud en ik ben de lead designer bij Kendo. Ik design
+                        vooral kleding, maar ook bijvoorbeeld de look van onze website. Ik heb veel passie voor
+                        vormgeven en help graag mee met de development van dit bedrijf.
+                    </p>
+                    <a href="https://www.instagram.com/arcane_designs_/" target="_blank" class="read-more">Portfolio</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright Kendo All rights reserved</p>
+    </footer>
+
+    <!-- Shopping cart -->
+    <div class="shopping-bag text-scale" id="shoppingBag">
+        <h2>Your Shopping Bag</h2>
+        <ul>
+            <li>
+                <div class="item">
+                    <img src="product1.jpg" alt="Product 1">
+                    <div class="item-details">
+                        <h3>Product 1</h3>
+                        <p>Size: Medium, Color: Red</p>
+                        <p>$20.00</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="product2.jpg" alt="Product 2">
+                    <div class="item-details">
+                        <h3>Product 2</h3>
+                        <p>Size: Small, Color: Blue</p>
+                        <p>$15.00</p>
+                    </div>
+                </div>
+            </li>
+            <!-- Add more items as needed -->
+        </ul>
+        <div class="total">
+            <span>Total:</span>
+            <span>$35.00</span>
+        </div>
+        <button class="checkout-button">Checkout</button>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

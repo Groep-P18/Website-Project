@@ -205,12 +205,15 @@ main {
 }
 
 button {
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
+    cursor: pointer;
+
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -346,7 +349,13 @@ footer {
 
 .slide-buttons{
     display: flex;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     justify-content: space-between;
+    z-index: 99;
 }
 
 .mySlides {display: none}
@@ -367,6 +376,7 @@ footer {
     padding: 16px;
     /* margin-top: -22px; */
     color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.529);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -382,8 +392,8 @@ footer {
 
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.718);
+    color: rgb(255, 255, 255);
   }
 
   /* Caption text */
@@ -492,6 +502,10 @@ footer {
 
     border: black 2px solid;
 
+}
+
+.profile:visited{
+    color: black;
 }
 
 .profile:hover{
@@ -622,8 +636,8 @@ footer {
 
 .preview_img{
     width: 100%;
-    min-width: 235px;
-    max-width: 512px;
+    min-width: 184px;
+    max-width: 384px;
     height: auto;
 }
 
@@ -697,6 +711,13 @@ footer {
     }
     .top-padding.flex.right{
         display: flex;
+    }
+}
+
+
+@media (min-width: 838px) {
+    .shopfilter{
+        display: inline-flex !important;
     }
 }
 
